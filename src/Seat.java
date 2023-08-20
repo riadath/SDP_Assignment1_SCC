@@ -30,7 +30,7 @@ class RacingCarSeat implements Seat {
     }
 }
 
-class SUVSeat implements Seat {
+class SUVCarSeat implements Seat {
     @Override
     public String seatType() {
         return "SUV Seat";

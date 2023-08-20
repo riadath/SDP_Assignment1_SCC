@@ -1,39 +1,39 @@
 public interface Chassis {
-    public String getChesisType();
-    public double getChesisPrice();
+    public String getChassisType();
+    public double getChassisPrice();
 }
 
 
 class TabularChassis implements Chassis {
     @Override
-    public String getChesisType() {
+    public String getChassisType() {
         return "Tabular";
     }
 
     @Override
-    public double getChesisPrice() {
+    public double getChassisPrice() {
         return 100000;
     }
 }
 class BackboneChassis implements Chassis {
     @Override
-    public String getChesisType() {
+    public String getChassisType() {
         return "Backbone";
     }
 
     @Override
-    public double getChesisPrice() {
+    public double getChassisPrice() {
         return 200000;
     }
 }
  class LadderFrameChassis implements Chassis {
     @Override
-    public String getChesisType() {
+    public String getChassisType() {
         return "LadderFrame";
     }
 
     @Override
-    public double getChesisPrice() {
+    public double getChassisPrice() {
         return 300000;
     }
 }
