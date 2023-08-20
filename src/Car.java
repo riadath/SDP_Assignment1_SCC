@@ -8,7 +8,6 @@ public abstract class Car {
     AutomatedAI automatedAI;
     Seat seat;
 
-    public abstract void assembleCar();
     public abstract double getCarPrice();
     public abstract String getCarDetails();
 }

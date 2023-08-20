@@ -85,7 +85,7 @@ class SUVCarFactory extends CarFactory {
     public Car createCar(String color, String region, CarType carType, String brand) {
         car = new SUV(
                 new CC1700(),
-                new SnowTire(),
+                new WhitewallTire(),
                 new LadderFrameChassis(),
                 new HighPoweredAC(),
                 getColor(color),

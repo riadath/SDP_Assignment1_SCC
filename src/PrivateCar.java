@@ -10,18 +10,14 @@ class PrivateCar extends Car{
         this.seat = seat;
     }
 
-    @Override
-    public void assembleCar() {
-        System.out.println("Assembling Private Car");
-    }
 
     @Override
     public double getCarPrice() {
-        return engine.getEnginePrice() + tire.getTirePrice() + chassis.getChesisPrice() + ac.getACPrice() + color.getColorPrice() + bodyDesign.getBodyDesignPrice() + automatedAI.getCost();
+        return engine.getEnginePrice() + tire.getTirePrice() + chassis.getChassisPrice() + ac.getACPrice() + color.getColorPrice() + bodyDesign.getBodyDesignPrice() + automatedAI.getCost();
     }
 
     @Override
     public String getCarDetails() {
-        return "Private Car Details: " + engine.getEngineType() + ", " + tire.getTireType() + ", " + chassis.getChesisType() + ", " + ac.getACType() + ", " + color.getColorType() + ", " + bodyDesign.getBodyDesignType() + ", " + automatedAI.getRegion() + ", " + seat.seatType();
+        return "Private Car Details: " + engine.getEngineType() + ", " + tire.getTireType() + ", " + chassis.getChassisType() + ", " + ac.getACType() + ", " + color.getColorType() + ", " + bodyDesign.getBodyDesignType() + ", " + automatedAI.getRegion() + ", " + seat.seatType();
     }
 }

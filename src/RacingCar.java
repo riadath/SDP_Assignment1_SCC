@@ -11,18 +11,15 @@ class RacingCar extends Car{
         this.seat = seat;
     }
 
-    @Override
-    public void assembleCar() {
-        System.out.println("Assembling Racing Car");
-    }
+
 
     @Override
     public double getCarPrice() {
-        return engine.getEnginePrice() + tire.getTirePrice() + chassis.getChesisPrice() + ac.getACPrice() + color.getColorPrice() + bodyDesign.getBodyDesignPrice() + automatedAI.getCost();
+        return engine.getEnginePrice() + tire.getTirePrice() + chassis.getChassisPrice() + ac.getACPrice() + color.getColorPrice() + bodyDesign.getBodyDesignPrice() + automatedAI.getCost();
     }
 
     @Override
     public String getCarDetails() {
-        return "Racing Car Details: " + engine.getEngineType() + ", " + tire.getTireType() + ", " + chassis.getChesisType() + ", " + ac.getACType() + ", " + color.getColorType() + ", " + bodyDesign.getBodyDesignType() + ", " + automatedAI.getRegion() + ", " + seat.seatType();
+        return "Racing Car Details: " + engine.getEngineType() + ", " + tire.getTireType() + ", " + chassis.getChassisPrice() + ", " + ac.getACType() + ", " + color.getColorType() + ", " + bodyDesign.getBodyDesignType() + ", " + automatedAI.getRegion() + ", " + seat.seatType();
     }
 }
