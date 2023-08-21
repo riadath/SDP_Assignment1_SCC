@@ -36,6 +36,6 @@ class CurvedRainShieldDecorator extends CarDecorator{
     }
     @Override
     public String getCarDetails() {
-        return car.getCarDetails() + "\n Curved Rain Shield";
+        return car.getCarDetails() + "\nCurved Rain Shield";
     }
 }

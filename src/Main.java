@@ -1,22 +1,32 @@
 public class Main {
     public static void main(String[] args) {
-        //test Car class
-        FordUSA fordUSA = new FordUSA();
-        Car car = fordUSA.orderCar("Red", CarType.RACING);
+        //car shop test
+        CarShop carShop1 = new FordUSA();
+        Car car1 = carShop1.orderCar("Red", CarType.RACING);
+        Car car2 = carShop1.orderCar("White", CarType.SUV);
+        Car car3 = carShop1.orderCar("Black", CarType.PRIVATE);
+        System.out.println(car1.getCarDetails());
+        System.out.println(car2.getCarDetails());
+        System.out.println(car3.getCarDetails());
+
+        //test CarDecorator
+        CarShop carShop2 = new FordUSA();
+        Car car = carShop2.orderCar("Red", CarType.RACING);
+        car = new OpenRoofDecorator(car);
+        car = new LoosenBigBumperDecorator(new CurvedRainShieldDecorator(car));
         System.out.println(car.getCarDetails());
-        System.out.println("====================================");
-        FerrariAsia ferrariAsia = new FerrariAsia();
-        car = ferrariAsia.orderCar("White", CarType.SUV);
-        System.out.println(car.getCarDetails());
-        System.out.println("====================================");
-        BMWUSA bmwUSA = new BMWUSA();
-        car = bmwUSA.orderCar("Black", CarType.PRIVATE);
-        System.out.println(car.getCarDetails());
-        System.out.println("====================================");
-        ToyotaAsia toyotaAsia = new ToyotaAsia();
-        car = toyotaAsia.orderCar("White", CarType.MILITARY);
-        System.out.println(car.getCarDetails());
-        System.out.println("====================================");
+
+        //test notification system
+        NotificationSystem notificationSystem = new NotificationSystem();
+        notificationSystem.addSubscriber(new Subscriber("John","jhon@mailmail.com"));
+        notificationSystem.addSubscriber(new Subscriber("Mary","mary@mailmail.com"));
+        notificationSystem.addSubscriber(new Subscriber("Peter","mailmail.com@mail"));
+
+        notificationSystem.notifyPriceChange();
+        notificationSystem.notifyFeatureChange();
+
+
+
 
     }
 }
