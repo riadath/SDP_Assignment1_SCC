@@ -1,6 +1,4 @@
 
-
-
 public abstract class CarShop {
     Car car;
     public static CarFactory getCarFactory(CarType carType){
