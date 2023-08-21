@@ -1,6 +1,6 @@
 public abstract class CarFactory {
     Car car;
-    public abstract Car createCar(String color,String region,CarType carType,String brand);
+    public abstract Car createCar(String color,String region,String brand);
 
     public static Color getColor(String color){
         if(color.equalsIgnoreCase("red")){
@@ -47,7 +47,7 @@ public abstract class CarFactory {
 
 class RacingCarFactory extends CarFactory {
     @Override
-    public Car createCar(String color, String region, CarType carType, String brand)
+    public Car createCar(String color, String region, String brand)
     {
         car = new RacingCar(
                 new CC1800(),
@@ -65,7 +65,7 @@ class RacingCarFactory extends CarFactory {
 
 class PrivateCarFactory extends CarFactory {
     @Override
-    public Car createCar(String color, String region, CarType carType, String brand) {
+    public Car createCar(String color, String region, String brand) {
         car = new PrivateCar(
                 new CC1300(),
                 new SpareTire(),
@@ -82,7 +82,7 @@ class PrivateCarFactory extends CarFactory {
 
 class SUVCarFactory extends CarFactory {
     @Override
-    public Car createCar(String color, String region, CarType carType, String brand) {
+    public Car createCar(String color, String region, String brand) {
         car = new SUV(
                 new CC1700(),
                 new WhitewallTire(),
@@ -99,7 +99,7 @@ class SUVCarFactory extends CarFactory {
 
 class MilitaryCarFactory extends CarFactory {
     @Override
-    public Car createCar(String color, String region, CarType carType, String brand) {
+    public Car createCar(String color, String region, String brand) {
         car = new MilitaryCar(
                 new CC2100(),
                 new SnowTire(),
