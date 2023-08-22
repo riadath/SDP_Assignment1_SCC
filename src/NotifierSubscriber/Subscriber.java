@@ -1,3 +1,5 @@
+package NotifierSubscriber;
+
 public class Subscriber {
     private final String name;
     private final String email;
@@ -19,6 +21,6 @@ public class Subscriber {
         NotificationSystem.getInstance().addSubscriber(this);
     }
     public void update(String updateInfo){
-        System.out.println("Dear Customer " + name + ",\n" + updateInfo);
+        System.out.println("Dear Customer " + name + " " + updateInfo);
     }
 }
